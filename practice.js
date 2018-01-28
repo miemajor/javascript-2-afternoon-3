@@ -124,6 +124,16 @@ contains(names, 'Colt', function(result){
 */
 
 //Code Here
+function uniq(arr, callback){
+  var unique = arr.filter(function(e,i,arr){
+    return arr.indexOf(e)===i;
+  })
+  console.log(callback(unique));
+}
+
+
+
+
 
 
 // Do not edit the code below.
@@ -142,6 +152,12 @@ uniq(names, function(uniqArr){
 */
 
 //Code Here 
+function each(arr, callback){
+  arr.map(function(e,i,array){
+    console.log(callback(e, i));
+  })
+}
+
 
 // Do not edit the code below.
 each(names, function(item, indice){
@@ -159,13 +175,16 @@ each(names, function(item, indice){
 */
 
 // Code here
-function getUserById(arr,id, callback){
-  for(let i = 0; i<arr,length;i++){
-    if(arr[i].id===id){
-      callback(arr[i]);
-    }
+
+function getUserById(users, id, callback){
+  users.filter(function(e,i,array){
+  if(e.id===id){
+    console.log(callback(e));
+    
   }
+})
 }
+
 
 // Do not edit the code below.
 var users = [
